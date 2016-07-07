@@ -38,6 +38,10 @@ describe('asfs', function () {
       console.log(stat)
       assert.equal(stat.size, 11)
     }
+    {
+      let filenames = yield asfs.readdirAsync(__dirname)
+      assert.ok(filenames)
+    }
   }))
 })
 

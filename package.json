@@ -1,6 +1,6 @@
 {
   "name": "asfs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Asyncronous file system utility.",
   "main": "lib",
   "scripts": {

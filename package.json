@@ -1,14 +1,17 @@
 {
   "name": "asfs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Asyncronous file system utility.",
   "main": "lib",
   "scripts": {
     "test": "./ci/test.js",
     "prepublish": "./ci/build.js"
   },
-  "repository": "okunishinishi/node-asfs",
-  "keywords": [],
+  "repository": "a-labo/asfs",
+  "keywords": [
+    "fs",
+    "async"
+  ],
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishitaka.com@gmail.com",
@@ -16,9 +19,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/okunishinishi/node-asfs/issues"
+    "url": "https://github.com/a-labo/asfs/issues"
   },
-  "homepage": "https://github.com/okunishinishi/node-asfs#readme",
+  "homepage": "https://github.com/a-labo/asfs#readme",
   "dependencies": {
     "co": "^4.6.0",
     "mkdirp": "^0.5.1"

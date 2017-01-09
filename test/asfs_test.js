@@ -42,6 +42,14 @@ describe('asfs', function () {
       let filenames = yield asfs.readdirAsync(__dirname)
       assert.ok(filenames)
     }
+
+    {
+      yield asfs.copyDirAsync(
+        `${__dirname}/../example`,
+        `${__dirname}/../tmp/dir-copy-test`,
+        {}
+      )
+    }
   }))
 })
 

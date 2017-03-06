@@ -1,6 +1,6 @@
 {
   "name": "asfs",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Asyncronous file system utility.",
   "main": "lib",
   "browser": "shim/browser.js",
@@ -26,11 +26,11 @@
   "dependencies": {
     "aglob": "^2.0.1",
     "co": "^4.6.0",
-    "filecopy": "^2.1.2",
+    "filecopy": "^3.0.0",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
-    "amocha": "^1.0.16",
+    "amocha": "^2.0.0",
     "ape-formatting": "^1.0.0",
     "ape-releasing": "^4.0.1",
     "ape-tasking": "^4.0.9",

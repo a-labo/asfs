@@ -6,51 +6,50 @@
 
 const asfs = require('../lib/asfs.js')
 const assert = require('assert')
-const co = require('co')
 
 describe('asfs', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Asfs', () => co(function * () {
-    yield asfs.mkdirpAsync(`${__dirname}/../tmp/foo`)
-    yield asfs.writeFileAsync(`${__dirname}/../tmp/foo/bar.txt`, 'This is bar')
-    let exists = yield asfs.existsAsync(`${__dirname}/../tmp/foo/bar.txt`)
+  it('Asfs', async () => {
+    await asfs.mkdirpAsync(`${__dirname}/../tmp/foo`)
+    await asfs.writeFileAsync(`${__dirname}/../tmp/foo/bar.txt`, 'This is bar')
+    const exists = await asfs.existsAsync(`${__dirname}/../tmp/foo/bar.txt`)
     assert.ok(exists)
-    let content = yield asfs.readFileAsync(`${__dirname}/../tmp/foo/bar.txt`)
+    const content = await asfs.readFileAsync(`${__dirname}/../tmp/foo/bar.txt`)
     assert.equal(content.toString(), 'This is bar')
 
     // With encode
     {
-      let content = yield asfs.readFileAsync(`${__dirname}/../tmp/foo/bar.txt`, 'base64')
+      const content = await asfs.readFileAsync(`${__dirname}/../tmp/foo/bar.txt`, 'base64')
       assert.equal(content.toString(), 'VGhpcyBpcyBiYXI=')
     }
 
     {
-      let stat = yield asfs.statAsync(`${__dirname}/../tmp/foo/bar.txt`, 'base64')
+      const stat = await asfs.statAsync(`${__dirname}/../tmp/foo/bar.txt`, 'base64')
       console.log(stat)
       assert.equal(stat.size, 11)
     }
     {
-      let filenames = yield asfs.readdirAsync(__dirname)
+      const filenames = await asfs.readdirAsync(__dirname)
       assert.ok(filenames)
     }
 
     {
-      yield asfs.copyDirAsync(
+      await asfs.copyDirAsync(
         `${__dirname}/../example`,
         `${__dirname}/../tmp/dir-copy-test`,
         {}
       )
     }
-  }))
+  })
 })
 
 /* global describe, before, after, it */

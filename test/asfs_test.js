@@ -34,12 +34,18 @@ describe('asfs', function () {
 
     {
       const stat = await asfs.statAsync(`${__dirname}/../tmp/foo/bar.txt`, 'base64')
-      console.log(stat)
       assert.equal(stat.size, 11)
     }
     {
       const filenames = await asfs.readdirAsync(__dirname)
       assert.ok(filenames)
+    }
+
+    {
+      await asfs.copyAsync(
+        __filename,
+        `${__dirname}/../tmp/dir-copy-file/hoge.text`,
+      )
     }
 
     {

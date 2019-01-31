@@ -32,6 +32,10 @@ describe('asfs', function () {
       assert.equal(content.toString(), 'VGhpcyBpcyBiYXI=')
     }
 
+    assert.ok(
+      await asfs.canReadAsync(`${__dirname}/../tmp/foo/bar.txt`)
+    )
+
     {
       const stat = await asfs.statAsync(`${__dirname}/../tmp/foo/bar.txt`, 'base64')
       assert.equal(stat.size, 11)

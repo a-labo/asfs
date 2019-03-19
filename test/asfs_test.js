@@ -20,7 +20,9 @@ describe('asfs', function () {
 
   it('Asfs', async () => {
     await asfs.mkdirpAsync(`${__dirname}/../tmp/foo`)
+    await asfs.mkdirpAsync(`${__dirname}/../tmp/foo/config.d`)
     await asfs.writeFileAsync(`${__dirname}/../tmp/foo/bar.txt`, 'This is bar')
+    await asfs.writeFileAsync(`${__dirname}/../tmp/foo/config.d/.config.txt`, 'This is config file')
     const exists = await asfs.existsAsync(`${__dirname}/../tmp/foo/bar.txt`)
     assert.ok(exists)
     const content = await asfs.readFileAsync(`${__dirname}/../tmp/foo/bar.txt`)
@@ -56,6 +58,11 @@ describe('asfs', function () {
       await asfs.copyDirAsync(
         `${__dirname}/../example`,
         `${__dirname}/../tmp/dir-copy-test`,
+        {}
+      )
+      await asfs.copyDirAsync(
+        `${__dirname}/../tmp/foo`,
+        `${__dirname}/../tmp/dir-copy-dir`,
         {}
       )
     }

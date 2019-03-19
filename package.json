@@ -1,6 +1,6 @@
 {
   "name": "asfs",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Asyncronous file system utility.",
   "main": "lib",
   "browser": "shim/browser.js",

@@ -1,7 +1,7 @@
 {
   "name": "asfs",
   "version": "2.2.4",
-  "description": "Asyncronous file system utility.",
+  "description": "Aynsc file system utility.",
   "main": "lib",
   "browser": "shim/browser.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "dependencies": {
     "aglob": "^3.0.1",
     "filecopy": "^4.0.2",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^1.0.3"
   },
   "devDependencies": {
     "amocha": "^5.0.2",
@@ -39,7 +39,7 @@
     "injectmock": "^2.0.0"
   },
   "engines": {
-    "node": ">=7.6",
-    "npm": ">=4"
+    "node": ">=8",
+    "npm": ">=5"
   }
 }

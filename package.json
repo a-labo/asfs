@@ -1,6 +1,6 @@
 {
   "name": "asfs",
-  "version": "2.2.4",
+  "version": "2.3.0",
   "description": "Aynsc file system utility.",
   "main": "lib",
   "browser": "shim/browser.js",
@@ -25,11 +25,11 @@
   "homepage": "https://github.com/a-labo/asfs#readme",
   "dependencies": {
     "aglob": "^3.0.1",
-    "filecopy": "^4.0.2",
+    "filecopy": "^4.1.0",
     "mkdirp": "^1.0.3"
   },
   "devDependencies": {
-    "amocha": "^5.0.2",
+    "amocha": "^7.0.1",
     "ape-formatting": "^2.0.2",
     "ape-releasing": "^5.0.7",
     "ape-tasking": "^4.0.12",

@@ -1,6 +1,6 @@
 {
   "name": "asfs",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Aynsc file system utility.",
   "main": "lib",
   "browser": "shim/browser.js",
